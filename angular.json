@@ -31,15 +31,35 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              
               {
+                
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/assets/css/bootsnav.css",
+  "node_modules/font-awesome/css/font-awesome.min.css",
+  "src/assets/css/owl.carousal.css",
+  "src/assets/css/owl.theme.default.css",
+  "src/assets/css/sm-clean.css",
+  "src/assets/css/sm-core-css.css",
+  "src/assets/css/slick.css",
+  "src/assets/css/responsive.css",
+  "src/assets/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.js",
+  "src/assets/js/jquery.smartmenus.js",
+  "src/assets/js/bootstrap.js",
+  "src/assets/js/owl1.js",
+  "src/assets/js/slick.js",
+  "src/assets/js/custom.js",
+  "src/assets/js/comming-soon.js"
+            ]
           },
           "configurations": {
             "production": {
