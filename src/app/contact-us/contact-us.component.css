@@ -1,0 +1,21 @@
+.location_box {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment of icon and text */
+    margin-bottom: 20px;
+}
+
+.location_icon {
+    margin-right: 15px; /* Adds space between the icon and the text */
+}
+
+.location_icon i {
+    font-size: 48px;
+    color: #d32f2f; /* Matching icon color */
+    vertical-align: middle;
+}
+
+.location_address p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5; /* Ensures proper spacing of multiple lines */
+}

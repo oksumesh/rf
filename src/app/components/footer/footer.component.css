@@ -1,0 +1,39 @@
+footer {
+    background: rgba(30, 30, 30, 1); /* Dark gray to match the website’s color */
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer_link a {
+    color: #f1f1f1;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer_link a:hover {
+    color: #d32f2f; /* Deep red for hover state */
+}
+
+.footer_social a {
+    color: #f1f1f1;
+    margin-right: 10px;
+}
+
+.footer_social a:hover {
+    color: #d32f2f; /* Deep red for social media icon hover */
+}
+
+.footer_right p {
+    color: #f1f1f1;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.footer_right a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.footer_right a:hover {
+    color: #d32f2f; /* Hover effect for IT company link */
+}
