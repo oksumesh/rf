@@ -45,3 +45,9 @@
     height: auto;
   }
 }
+
+.home-main{
+  background-image: url('/assets/img/back_bg.webp');
+    height: 526px;
+    clip-path: polygon(100% 0, 100% 94%, 0 91%, 0 0);
+}

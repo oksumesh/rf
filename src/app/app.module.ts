@@ -10,6 +10,8 @@ import { ServicesComponent } from './services/services.component';
 import { TrainersComponent } from './trainers/trainers.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { OurServicesComponent } from './sections/our-services/our-services.component';
+import { GuardsSectionComponent } from './sections/guards-section/guards-section.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FooterComponent } from './components/footer/footer.component';
     ServicesComponent,
     TrainersComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    OurServicesComponent,
+    GuardsSectionComponent
   ],
   imports: [
     BrowserModule,

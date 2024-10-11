@@ -1,0 +1,47 @@
+<div [ngClass]="{'yoga_bg': applyYogaBgClass}">
+    <div class="container">
+      <div class="title_box">
+        <h2>Our Services</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <!-- First Column: Services on the left -->
+          <div class="first_col">
+            <div *ngFor="let service of leftServices" class="yoga_box">
+              <div class="yoga_con">
+                <h3>{{ service.title }}</h3>
+                <p>{{ service.description }}</p>
+              </div>
+              <div class="yoga_img">
+                <div class="icon_box">
+                  <img [src]="service.icon" alt="{{ service.title }} Icon" style="width: 75px; height: 75px;">
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Center Column: Main Icon -->
+          <div class="first_col2">
+            <div class="yoga_img_box">
+              <img loading="lazy" class="img-fluid" src="assets/img/iconmain.png" alt="Main Icon">
+            </div>
+          </div>
+  
+          <!-- Third Column: Services on the right -->
+          <div class="first_col3">
+            <div *ngFor="let service of rightServices" class="yoga_box">
+              <div class="yoga_img">
+                <div class="icon_box">
+                  <img [src]="service.icon" alt="{{ service.title }} Icon" style="width: 75px; height: 75px;">
+                </div>
+              </div>
+              <div class="yoga_con">
+                <h3>{{ service.title }}</h3>
+                <p>{{ service.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
