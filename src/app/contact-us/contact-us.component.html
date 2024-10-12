@@ -1,18 +1,16 @@
 <!-- Start Header Banner Section -->
 <div id="demo1" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <!-- background-image:url(assets/img/contact_bg.webp); -->
-      <div class="carousel-item active" style=" height:526px;">
-        <div class="slider_text1">
-          <h1>Contact Us</h1>
-        </div>
-        <div class="carousel-caption1">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="inner_page_title">
-                  <h2>Contact Us</h2>
-                </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="height:526px;">
+      <div class="slider_text1">
+        <h1>Contact Us</h1>
+      </div>
+      <div class="carousel-caption1">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="inner_page_title">
+                <h2>Contact Us</h2>
               </div>
             </div>
           </div>
@@ -20,99 +18,105 @@
       </div>
     </div>
   </div>
-  <!-- End Header Banner Section -->
-  
-  <!-- Start Contact Info Section -->
-  <div class="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-4">
-          <div class="location_box">
-            <div class="location_icon">
-              <div class="location_icon">
-                <i class="fa fa-map-marker" style="font-size: 48px; color: #d32f2f;"></i>
-              </div>
-            </div>
-            <div class="location_address">
-              <p>13005 Greenville Avenue, California, TX 70240</p>
-            </div>
+</div>
+<!-- End Header Banner Section -->
+
+<!-- Start Contact Info Section -->
+<div class="contact">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Info Box -->
+      <div class="col-lg-4 col-md-4" *ngFor="let contact of contacts">
+        <div class="location_box">
+          <div class="location_icon">
+            <i [class]="contact.icon" style="font-size: 48px; color:rgba(120, 40, 40, 0.9) 50%"></i>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-4">
-          <div class="location_box">
-            <div class="location_icon">
-              <i class="fa fa-phone" style="font-size: 48px; color: #d32f2f;"></i>
-            </div>
-            <div class="location_address">
-              <p>
-                <a href="tel:+18001256524">+1 800 125 6524</a><br>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4">
-          <div class="location_box">
-            <div class="location_icon">
-              <i class="fa fa-envelope" style="font-size: 48px; color: #d32f2f;"></i>
-            </div>
-            <div class="location_address">
-              <p>
-                <a href="mailto:Daario@domain.com">Daariodomain.com</a>
-              </p>
-            </div>
+          <div class="location_address">
+            <p [innerHTML]="contact.content"></p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- End Contact Info Section -->
-  
-  <!-- Start Contact Form Section -->
-  <div class="contact_form">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12">
-          <div class="title_box">
-            <h2>Get In Touch</h2>
-            <img loading="lazy" class="img-fluid" src="assets/img/title_line.webp" alt="">
-          </div>
+</div>
+<!-- End Contact Info Section -->
+
+<!-- Start Contact Form Section -->
+<div class="container">
+  <div class="row justify-content-center">
+<div class="col-lg-8 remove-padding" >
+  <div class="card contact-form">
+    <div class="card-header">
+      <h3>Get In Touch</h3>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="contactForm">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Your Name"
+            formControlName="name"
+            required
+          />
         </div>
-        <div class="col-lg-10">
-          <form id="contact-us-form">
-            <div class="row">
-              <div class="col-lg-6">
-                <input type="text" class="contact_from" name="name" placeholder="First Name" required>
-              </div>
-              <div class="col-lg-6">
-                <input type="text" class="contact_from" name="lname" placeholder="Last Name" required>
-              </div>
-              <div class="col-lg-6">
-                <input type="text" class="contact_from" name="phone" placeholder="Phone no." required>
-              </div>
-              <div class="col-lg-6">
-                <input type="email" class="contact_from" name="email" placeholder="Email" required>
-              </div>
-              <div class="col-lg-12">
-                <textarea placeholder="Message..." name="message" class="contact_mes" required></textarea>
-              </div>
-              <div class="col-lg-12">
-                <div class="submit_btn1">
-                  <button type="submit" aria-label="submit" class="submit_btn">Submit Now</button>
-                </div>
-              </div>
-            </div>
-          </form>
+        <div class="form-group">
+          <input
+            type="tel"
+            class="form-control"
+            placeholder="Phone Number"
+            formControlName="phone"
+            required
+          />
+          <span
+            *ngIf="isWhatsAppButtonClicked && contactForm.get('phone')?.hasError('required') || contactForm.get('phone')?.hasError('pattern')"
+            class="text-danger alert-message"
+          >Phone number is required for WhatsApp.</span>
         </div>
-      </div>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Your Email"
+            formControlName="email"
+            required
+          />
+          <span
+            *ngIf="isEmailButtonClicked && contactForm.get('email')?.hasError('required')"
+            class="text-danger alert-message"
+          >Email is required to Send Mail.</span>
+        </div>
+        <div class="form-group">
+          <textarea
+            class="form-control"
+            rows="4"
+            placeholder="Your Message"
+            formControlName="message"
+            required
+          ></textarea>
+        </div>
+        <button type="button" class="btn btn-primary ss-color-mail half-width-btn" (click)="sendEmail()">
+          <i class="fas fa-envelope-square"></i>
+          Email
+        </button>
+        <button type="button" class="btn btn-primary ss-color-wp half-width-btn" (click)="sendWhatsApp()">
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp
+        </button>
+      </form>
     </div>
   </div>
-  <!-- End Contact Form Section -->
-  
-  <!-- Start Google Map Section -->
-  <div class="map">
-    <div class="map_box">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d868167.6648970309!2d-100.71163062491826!3d42.634291174193244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87831dad41ba6559%3A0xa915dfe8f6bad294!2sAinsworth%2C+NE+69210%2C+USA!5e0!3m2!1sen!2sin!4v1559655132816!5m2!1sen!2sin"
-        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
+</div>
+</div>
+</div>
+<!-- End Contact Form Section -->
+
+<!-- Start Google Map Section -->
+<div class="map">
+  <div class="map_box">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14022.154879768205!2d73.87244987263967!3d29.91410489922851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3916e4828faed58b%3A0x8e03d63c151b8c42!2sPlatinum%20O%20Block%2C%20Sri%20Ganganagar%2C%20Rajasthan%20335001%2C%20India!5e0!3m2!1sen!2sin!4v1697097958586!5m2!1sen!2sin"
+      width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
+    </iframe>
   </div>
-  <!-- End Google Map Section -->
+</div>
+<!-- End Google Map Section -->

@@ -1,0 +1,80 @@
+/* our-clients.component.css */
+/* Custom styles for the client images */
+
+/* Set the dimensions for the images */
+img {
+    width: 330px;
+    height: 420px;
+    object-fit: cover; /* Adjust this as needed to control image aspect ratio */
+    border-radius: 8px; /* Add rounded borders to the images */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .bg-add{
+    /* background-color: #e5ecf5; */
+  }
+  /* Add spacing between the images */
+  .col-md-3 { /* Change from col-md-4 to col-md-3 to show 4 images per row */
+    padding: 8px;
+  }
+  
+  .main-container {
+    width: 100%;
+    height: 100%;
+    /* background-color: #e5ecf5; */
+    padding-top: 1rem !important;
+  }
+  .caeritificate-cards{
+    display: flex;justify-content: center;
+    transition: box-shadow 0.3s, transform 0.3s ease-in-out;
+  }
+  .caeritificate-cards:hover{
+    transform: scale(1.02);
+  }
+  
+  .image-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999;
+  }
+  
+  .image-modal {
+    max-width: 100%;
+    max-height: 100%;
+    
+    
+    overflow: auto;
+    
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .image-modal img {
+    max-width: 100%;
+    height: auto;
+    height: 750px;
+    width: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .image-modal img {
+      max-width: 100%;
+      height: auto;
+      height: 500px; /* Adjust the height for smaller screens */
+    }
+  
+    img {
+      width: 330px;
+      height: 520px;
+      object-fit: cover; /* Adjust this as needed to control image aspect ratio */
+      border-radius: 8px; /* Add rounded borders to the images */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+  

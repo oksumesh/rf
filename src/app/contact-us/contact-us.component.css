@@ -1,3 +1,7 @@
+.contact{
+    margin-left: 50px;
+}
+
 .location_box {
     display: flex;
     align-items: center; /* Ensures vertical alignment of icon and text */
@@ -10,7 +14,7 @@
 
 .location_icon i {
     font-size: 48px;
-    color: #d32f2f; /* Matching icon color */
+    color: rgba(120, 40, 40, 0.9);
     vertical-align: middle;
 }
 
@@ -19,3 +23,130 @@
     font-size: 16px;
     line-height: 1.5; /* Ensures proper spacing of multiple lines */
 }
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .card-header {
+    background:linear-gradient(
+        to right,
+        rgba(30, 30, 30, 0.9) 0%,
+        rgba(120, 40, 40, 0.9) 50%,
+        rgba(10, 60, 120, 0.9) 100%);
+    padding: 10px 20px;
+    border-radius: 8px 8px 0 0;
+    color: white;
+  }
+  
+  .card-header h3 {
+    margin: 0;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  textarea.form-control {
+    resize: vertical;
+  }
+  
+  .btn-primary {
+    /* background-color: #007bff; */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 4px 11px 4px;
+  }
+  
+  /* .btn-primary:hover {
+    background-color: #0056b3;
+  } */
+  
+  .btn-primary:active {
+    background-color: #004099;
+  }
+  
+  .btn-primary:focus {
+    outline: none;
+  }
+  
+  .phone-section {
+    text-align: right;
+    margin-bottom: 20px;
+    color: #888;
+  }
+  
+  .phone-section h4 {
+    margin-bottom: 5px;
+  }
+  
+  .contact-details p {
+    margin: 15px 0;
+  }
+  
+  .contact-details i {
+    margin-right: 10px;
+    margin-top: 30px;
+    font-size: 20px; /* Adjust the font-size as per your requirement */
+  }
+  
+  .logo-container {
+    text-align: center;
+  }
+  
+  .logo {
+    width: 200px; /* Adjust the width as per your requirement */
+    height: auto; /* This will maintain the aspect ratio of the logo */
+  }
+  @media (max-width: 767px) {
+    .remove-padding {
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+    }
+  }
+  .hoveranim{
+    cursor: pointer;
+    transition:transform 0.3s ease-in-out;
+  }
+  .hoveranim:hover{
+    transform: scale(1.02);
+  }
+  
+  .nav-title {
+    height: 82px;
+    max-height: 100px;
+  }
+
+  .ss-color-mail {
+    background-color:rgba(66, 133, 244, 1); /* Replace with your desired color */
+    border-color: #ff5733; /* Optional: match the border color */
+  }
+  
+  .ss-color-wp {
+    background-color:rgba(37, 211, 102, 1); /* Replace with your desired color */
+    border-color: #ff5733; /* Optional: match the border color */
+  }
+  
+  .ss-color:hover {
+    background-color: #e74c3c; /* Optional: change color on hover */
+  }

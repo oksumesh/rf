@@ -12,6 +12,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OurServicesComponent } from './sections/our-services/our-services.component';
 import { GuardsSectionComponent } from './sections/guards-section/guards-section.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CertificationsComponent } from './certifications/certifications.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { GuardsSectionComponent } from './sections/guards-section/guards-section
     HeaderComponent,
     FooterComponent,
     OurServicesComponent,
-    GuardsSectionComponent
+    GuardsSectionComponent,
+    CertificationsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
