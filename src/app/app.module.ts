@@ -14,7 +14,6 @@ import { OurServicesComponent } from './sections/our-services/our-services.compo
 import { GuardsSectionComponent } from './sections/guards-section/guards-section.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CertificationsComponent } from './certifications/certifications.component';
-import { NgImageSliderModule } from 'ng-image-slider';
 import { BannerComponent } from './sections/banner/banner.component';
 
 @NgModule({
@@ -35,8 +34,7 @@ import { BannerComponent } from './sections/banner/banner.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    NgImageSliderModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
