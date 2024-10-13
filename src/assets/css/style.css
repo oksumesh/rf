@@ -875,7 +875,6 @@ i.fa.fa-plus {
   border-radius: 5px 5px 0px 0px;
 }
 .testimonials {
-  background-image: url(../img/testimonials_bg1.webp);
   background-repeat: no-repeat;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -1245,7 +1244,6 @@ i.fa.fa-plus {
   margin-top: 0px;
 }
 .pricing {
-  background-image: url(../img/price_bg0.webp);
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 90px;
@@ -1296,7 +1294,6 @@ i.fa.fa-plus {
   color: #fff;
 }
 .price_box {
-  background-image: url(../img/price_bg1.webp);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 5px;
@@ -2212,7 +2209,6 @@ input.contact_from {
   color: #585b5d;
 }
 .services_box {
-  background-image: url(../img/services_img.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom -300%;
@@ -3225,7 +3221,6 @@ li.last_menu {
     margin-bottom: 50px;
   }
   .yoga_bg {
-    background-image: url(../img/yoga_bg.webp);
     background-repeat: no-repeat;
     padding-top: 40px;
     padding-bottom: 20px;
@@ -3850,7 +3845,6 @@ li.last_menu {
     margin-bottom: 50px;
   }
   .yoga_bg {
-    background-image: url(../img/yoga_bg.webp);
     background-repeat: no-repeat;
     padding-top: 50px;
     padding-bottom: 20px;
