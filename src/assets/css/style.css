@@ -511,42 +511,15 @@ a.sliderbtn:hover {
 .overlay {
   position: absolute;
   top: 0;
-  background: rgba(156, 212, 59, 1);
-  background: -moz-linear-gradient(
-    left,
-    rgba(156, 212, 59, 0.9) 0%,
-    rgba(54, 168, 121, 0.9) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right top,
-    color-stop(0%, rgba(156, 212, 59, 0.9)),
-    color-stop(100%, rgba(54, 168, 121, 0.9))
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(156, 212, 59, 0.9) 0%,
-    rgba(54, 168, 121, 0.9) 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(156, 212, 59, 0.9) 0%,
-    rgba(54, 168, 121, 0.9) 100%
-  );
-  background: -ms-linear-gradient(
-    left,
-    rgba(156, 212, 59, 0.9) 0%,
-    rgba(54, 168, 121, 0.9) 100%
-  );
-  background: linear-gradient(
-    to right,
-    rgba(156, 212, 59, 0.9) 0%,
-    rgba(54, 168, 121, 0.9) 100%
-  );
+  background:linear-gradient(
+        to right,
+        rgba(30, 30, 30, 0.9) 0%,
+        rgba(120, 40, 40, 0.9) 50%,
+        rgba(10, 60, 120, 0.9) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9cd43b', endColorstr='#36a879', GradientType=1 );
   width: 100%;
   height: 100%;
-  padding: 30px;
+  padding: 29px;
   border-radius: 5px;
 }
 .overlay .headline {
@@ -601,22 +574,39 @@ a.sliderbtn:hover {
   float: left;
   position: relative;
 }
-.yoga_con {
-  text-align: right;
-}
-.yoga_con h3 {
+.yoga_con_home h3 {
   font-size: 20px;
   color: #fff;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
 }
-.yoga_con p {
+.yoga_con h3 {
+  font-size: 20px;
+  color: rgba(30, 30, 30, 1);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+.yoga_con_home p {
   font-size: 14px;
   color: #fff;
   line-height: 25px;
   margin-bottom: 0px;
   font-family: "Poppins", sans-serif;
+}
+.yoga_con p {
+  font-size: 14px;
+  color: rgba(30, 30, 30, 1);
+  line-height: 25px;
+  margin-bottom: 0px;
+  font-family: "Poppins", sans-serif;
+}
+.yoga_con_home {
+  text-align: right;
+  width: 70%;
+  float: left;
+  margin-right: 15px;
 }
 .yoga_con {
   text-align: right;
@@ -649,6 +639,9 @@ a.sliderbtn:hover {
   width: 32%;
   float: left;
   position: relative;
+}
+.first_col3 .yoga_con_home {
+  text-align: left;
 }
 .first_col3 .yoga_con {
   text-align: left;
@@ -2206,6 +2199,12 @@ input.contact_from {
 .progress_box {
   margin-right: 30px;
 }
+.services_box .yoga_con_home h3 {
+  color: #585b5d;
+}
+.services_box .yoga_con_home p {
+  color: #585b5d;
+}
 .services_box .yoga_con h3 {
   color: #585b5d;
 }
@@ -3296,9 +3295,6 @@ li.last_menu {
   .aboutbtn {
     margin: 0 0 0 auto;
   }
-  .yoga_con h3 {
-    font-size: 18px;
-  }
   .footer_con {
     text-align: center;
   }
@@ -3563,6 +3559,12 @@ li.last_menu {
   .first_col3 {
     width: 50%;
   }
+  .yoga_con_home h3 {
+    font-size: 18px;
+  }
+  .yoga_con_home p {
+    font-size: 13px;
+  }
   .yoga_con h3 {
     font-size: 18px;
   }
@@ -3702,6 +3704,16 @@ li.last_menu {
   }
   .first_col {
     width: 100%;
+  }
+  .yoga_con_home {
+    text-align: left;
+    width: 74%;
+    float: right;
+    margin-right: 0px;
+    padding-left: 10px;
+  }
+  .yoga_con_home h3 {
+    font-size: 18px;
   }
   .yoga_con {
     text-align: left;

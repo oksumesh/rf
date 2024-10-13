@@ -8,7 +8,7 @@
           <!-- First Column: Services on the left -->
           <div class="first_col">
             <div *ngFor="let service of leftServices" class="yoga_box">
-              <div class="yoga_con">
+              <div [ngClass]="applyYogaBgClass ? 'yoga_con_home' : 'yoga_con'">
                 <h3>{{ service.title }}</h3>
                 <p>{{ service.description }}</p>
               </div>
@@ -35,7 +35,7 @@
                   <img [src]="service.icon" alt="{{ service.title }} Icon" style="width: 75px; height: 75px;">
                 </div>
               </div>
-              <div class="yoga_con">
+              <div [ngClass]="applyYogaBgClass ? 'yoga_con_home' : 'yoga_con'">
                 <h3>{{ service.title }}</h3>
                 <p>{{ service.description }}</p>
               </div>
