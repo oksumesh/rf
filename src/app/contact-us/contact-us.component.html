@@ -1,92 +1,52 @@
 <app-banner [heading1]="'Contact Us'" [heading2]="'Contact Us'"></app-banner>
 
-<!-- Start Contact Info Section -->
-<div class="contact">
-  <div class="container">
-    <div class="row">
-      <!-- Contact Info Box -->
-      <div class="col-lg-4 col-md-4" *ngFor="let contact of contacts">
-        <div class="location_box">
-          <div class="location_icon">
-            <i [class]="contact.icon" style="font-size: 48px; color:rgba(120, 40, 40, 0.9) 50%"></i>
-          </div>
-          <div class="location_address">
-            <p [innerHTML]="contact.content"></p>
-          </div>
+<div class="container">
+  <div class="row d-flex align-items-center">
+    <!-- Contact Info Section (left side) -->
+    <div class="col-lg-4 col-md-4 remove-padding">
+      <div *ngFor="let contact of contacts" class="location_box">
+        <div class="location_icon">
+          <i [class]="contact.icon" style="font-size: 48px; color:rgba(120, 40, 40, 0.9) 50%"></i>
+        </div>
+        <div class="location_address">
+          <p [innerHTML]="contact.content"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form Section (right side) -->
+    <div class="col-lg-8 remove-padding">
+      <div class="card contact-form">
+        <div class="card-header">
+          <h3>Get In Touch</h3>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="contactForm">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name" formControlName="name" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" placeholder="Phone Number" formControlName="phone" required />
+              <span *ngIf="isWhatsAppButtonClicked && contactForm.get('phone')?.hasError('required') || contactForm.get('phone')?.hasError('pattern')" class="text-danger alert-message">Phone number is required for WhatsApp.</span>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Your Email" formControlName="email" required />
+              <span *ngIf="isEmailButtonClicked && contactForm.get('email')?.hasError('required')" class="text-danger alert-message">Email is required to Send Mail.</span>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="4" placeholder="Your Message" formControlName="message" required></textarea>
+            </div>
+            <button type="button" class="btn btn-primary ss-color-mail half-width-btn" (click)="sendEmail()">
+              <i class="fas fa-envelope-square"></i> Email
+            </button>
+            <button type="button" class="btn btn-primary ss-color-wp half-width-btn" (click)="sendWhatsApp()">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+          </form>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- End Contact Info Section -->
-
-<!-- Start Contact Form Section -->
-<div class="container">
-  <div class="row justify-content-center">
-<div class="col-lg-8 remove-padding" >
-  <div class="card contact-form">
-    <div class="card-header">
-      <h3>Get In Touch</h3>
-    </div>
-    <div class="card-body">
-      <form [formGroup]="contactForm">
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Your Name"
-            formControlName="name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <input
-            type="tel"
-            class="form-control"
-            placeholder="Phone Number"
-            formControlName="phone"
-            required
-          />
-          <span
-            *ngIf="isWhatsAppButtonClicked && contactForm.get('phone')?.hasError('required') || contactForm.get('phone')?.hasError('pattern')"
-            class="text-danger alert-message"
-          >Phone number is required for WhatsApp.</span>
-        </div>
-        <div class="form-group">
-          <input
-            type="email"
-            class="form-control"
-            placeholder="Your Email"
-            formControlName="email"
-            required
-          />
-          <span
-            *ngIf="isEmailButtonClicked && contactForm.get('email')?.hasError('required')"
-            class="text-danger alert-message"
-          >Email is required to Send Mail.</span>
-        </div>
-        <div class="form-group">
-          <textarea
-            class="form-control"
-            rows="4"
-            placeholder="Your Message"
-            formControlName="message"
-            required
-          ></textarea>
-        </div>
-        <button type="button" class="btn btn-primary ss-color-mail half-width-btn" (click)="sendEmail()">
-          <i class="fas fa-envelope-square"></i>
-          Email
-        </button>
-        <button type="button" class="btn btn-primary ss-color-wp half-width-btn" (click)="sendWhatsApp()">
-          <i class="fab fa-whatsapp"></i>
-          WhatsApp
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-</div>
 </div>
 <!-- End Contact Form Section -->
 

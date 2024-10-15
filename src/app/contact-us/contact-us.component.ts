@@ -16,11 +16,18 @@ export class ContactUsComponent {
     },
     {
       icon: 'fa fa-phone',
-      content: '<a href="tel:+918830230007">+91 8830230007</a>'
+      content: `
+      Fire Safety: <br>
+      <a href="tel:+918290573678">+91 82905 73678</a> 
+      <a href="tel:+918830230007">+91 8830230007</a><br>
+      Security Service: <br>
+      <a href="tel:+919799464651">+91 97994 64651</a>
+      <a href="tel:+918830230007">+91 8830230007</a>
+    `
     },
     {
       icon: 'fa fa-envelope',
-      content: '<a href="mailto:info@reflexfire.in">Reflexfire.in</a>'
+      content: '<a href="mailto:info@reflexfire.in">info@reflexfire.in</a>'
     }
   ];
 
