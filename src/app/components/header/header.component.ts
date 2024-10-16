@@ -6,8 +6,28 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  onPhoneButtonClick() {
-    // Replace 'phone-number' with the actual phone number
-    window.open('tel:+918830230007', '_blank');
+  closeMenu() {
+    const checkbox = document.getElementById('main-menu-state') as HTMLInputElement;
+    checkbox.checked = false;
   }
+
+  isModalOpen = false;
+
+  onPhoneButtonClick() {
+    this.isModalOpen = true;
+  }
+  
+  closeModal() {
+    this.isModalOpen = false;
+  }
+
+  callNumber(phoneNumber: string) {
+    window.open(`tel:${phoneNumber}`);
+  }
+
+  sendWhatsApp() {
+    const whatsappUrl = `https://wa.me/918830230007?text=Hello, I am interested in learning more about the security and fire safety services offered by Reflex Fire & Security. Could you please provide more details about your services, pricing, and availability? Thank you!`;
+    window.open(whatsappUrl);
+  }
+  
 }

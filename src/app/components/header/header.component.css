@@ -17,6 +17,12 @@
     align-items: center; /* Vertically center the content within the button */
 }
 
+@media (max-width: 767px) {
+    .nav-item button {
+      border-radius: 0px 10px 10px 0px; /* Applies fully rounded corners for mobile */
+    }
+  }
+
 .button-enquire {
     color: white !important;
     background:linear-gradient(
@@ -39,3 +45,94 @@
     /* background-color: #0080a7 !important; */
     outline: none !important;
 }
+
+/* Add some background transparency to match your website's design */
+.modal-background {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  /* Modal Box Styling */
+  .modal-box {
+    background-color: rgba(30, 30, 30, 0.85); /* Darker tone with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+    position: relative;
+  }
+
+
+
+  .modal-title {
+    font-size: 1.5rem; /* Adjust size based on your needs */
+    text-align: center;
+    flex-grow: 1; /* Allows the title to take up as much space as needed */
+  }
+  
+  /* Header Styling */
+  .modal-box h3 {
+    color: #fff; /* White text */
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styles */
+  .modal-box .contact-btn {
+    background:linear-gradient(
+        to right,
+        rgba(30, 30, 30, 0.9) 0%,
+        rgba(120, 40, 40, 0.9) 50%,
+        rgba(10, 60, 120, 0.9) 100%);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover Effect */
+  .modal-box .contact-btn:hover {
+    background-color: #d32f2f; /* Brighter hover effect */
+    color: #fff;
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between; /* Space between heading and button */
+    align-items: center; /* Vertically center them */
+    padding: 10px 15px; /* Adjust padding as needed */
+  }
+
+  .modal-header h3 {
+    flex-grow: 1; /* Let the heading take up remaining space */
+    text-align: center; /* Center the heading */
+    margin: 0;
+    font-size: 1.5rem; /* Adjust size if needed */
+  }
+
+  .modal-close {
+    font-size: 1.25rem; /* Adjust button size */
+    color: #fff; /* Adjust color */
+    border-radius: 10px;
+    background:linear-gradient(
+        to right,
+        rgba(30, 30, 30, 0.9) 0%,
+        rgba(120, 40, 40, 0.9) 50%,
+        rgba(10, 60, 120, 0.9) 100%);
+    cursor: pointer;
+    padding: 0px 10px;
+  }
+  

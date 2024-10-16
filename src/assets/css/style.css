@@ -1580,38 +1580,6 @@ footer {
 }
 .footer_social ul li:hover {
   transition: all ease 0.5s 0s;
-  background: rgba(116, 215, 161, 1);
-  background: -moz-linear-gradient(
-    top,
-    rgba(116, 215, 161, 1) 0%,
-    rgba(79, 208, 195, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    left bottom,
-    color-stop(0%, rgba(116, 215, 161, 1)),
-    color-stop(100%, rgba(79, 208, 195, 1))
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(116, 215, 161, 1) 0%,
-    rgba(79, 208, 195, 1) 100%
-  );
-  background: -o-linear-gradient(
-    top,
-    rgba(116, 215, 161, 1) 0%,
-    rgba(79, 208, 195, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    top,
-    rgba(116, 215, 161, 1) 0%,
-    rgba(79, 208, 195, 1) 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(116, 215, 161, 1) 0%,
-    rgba(79, 208, 195, 1) 100%
-  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74d7a1', endColorstr='#4fd0c3', GradientType=0 );
 }
 .footer_social {
@@ -3960,7 +3928,7 @@ li.last_menu {
     background-color: transparent !important;
   }
   .sm-clean a:hover {
-    color: #15a025 !important;
+    color: #d32f2f !important;
   }
   .slider_text h1 {
     display: none;
