@@ -1,0 +1,53 @@
+.yoga_bg {
+    background-image: url(../../../assets/img/servicebg.svg);
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+  
+  .yoga_bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(30, 30, 30, 0.9) 0%,
+      rgba(120, 40, 40, 0.85) 53%,
+      rgba(10, 60, 120, 0.9) 100%
+    );
+    z-index: -1; /* Ensure background is behind the content */
+  }
+  
+  .yoga_box {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    margin-bottom: 40px;
+    z-index: 10;
+}
+
+.yoga_img {
+    margin-right: 20px; /* Adds space between the icon and the text */
+    text-align: center;
+}
+
+.yoga_con {
+    text-align: left; /* Ensures text starts right after the icon */
+    color: white;
+}
+
+.service-icon {
+    width: 75px;
+    height: 75px;
+}
+
+.title_box h2 {
+    color: white;
+    font-size: 36px;
+    z-index: 10;
+}

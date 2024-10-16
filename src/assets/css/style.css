@@ -543,14 +543,19 @@ a.sliderbtn:hover {
   letter-spacing: 0.5px;
   line-height: 25px;
 }
-.yoga_bg {
-  /* background-image: url(../img/yoga_bg1.webp); */
+/* .yoga_bg {
+  background-image: url(../img/servicebg.svg);
   position: relative;
   background-repeat: no-repeat;
   padding-top: 100px;
   padding-bottom: 20px;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 .yoga_bg:before {
   content: "";
@@ -558,7 +563,7 @@ a.sliderbtn:hover {
   width: 100%;
   top: 0;
   position: absolute;
-  background: rgb(30, 30, 30); /* Dark gray as base */
+  background: rgb(30, 30, 30); 
   background: linear-gradient(
     180deg,
     rgba(30, 30, 30, 0.9) 0%,
@@ -568,7 +573,7 @@ a.sliderbtn:hover {
 }
 .yoga_bg .title_box h2 {
   color: #fff;
-}
+} */
 .first_col {
   width: 32%;
   float: left;
@@ -3188,12 +3193,6 @@ li.last_menu {
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  .yoga_bg {
-    background-repeat: no-repeat;
-    padding-top: 40px;
-    padding-bottom: 20px;
-    background-size: cover;
-  }
   .yoga_img_box {
     display: none;
   }
@@ -3396,10 +3395,6 @@ li.last_menu {
   }
   .about_con h3 {
     font-size: 22px;
-  }
-  .yoga_bg {
-    padding-top: 40px;
-    padding-bottom: 20px;
   }
   .date_con {
     padding: 0px 20px 0px 20px;
@@ -3811,11 +3806,6 @@ li.last_menu {
   .about_us {
     margin-top: 50px;
     margin-bottom: 50px;
-  }
-  .yoga_bg {
-    background-repeat: no-repeat;
-    padding-top: 50px;
-    padding-bottom: 20px;
   }
   .yoga_img_box {
     margin-bottom: 30px;

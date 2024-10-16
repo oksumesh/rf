@@ -22,6 +22,11 @@ export class OurServicesComponent {
         title: 'Fire Safety Manpower',
         description: 'Certified fire safety personnel to handle fire prevention and emergency management.',
         icon: 'assets/img/firesafetymanpower.png'
+      },
+      {
+          title: 'Armour Guard Services',
+          description: 'Equipped and trained armour guards to provide enhanced security for high-risk facilities and events.',
+          icon: 'assets/img/armguardicon.png'
       }
     ];
   
@@ -41,6 +46,11 @@ export class OurServicesComponent {
         title: 'Event Security Management',
         description: 'Comprehensive security solutions tailored for events to ensure smooth and safe operations.',
         icon: 'assets/img/esmicon.png'
+      },
+      {
+          title: 'Security Camera Installation',
+          description: 'High-quality security camera installation and monitoring for 24/7 surveillance and safety.',
+          icon: 'assets/img/securitycameraicon.png'
       }
     ];
 }

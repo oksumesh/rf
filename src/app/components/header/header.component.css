@@ -134,5 +134,10 @@
         rgba(10, 60, 120, 0.9) 100%);
     cursor: pointer;
     padding: 0px 10px;
+    transition: 0.1s ease;
+  }
+
+  .active-link {
+    font-size: large;
   }
   
