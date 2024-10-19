@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, input } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -8,37 +8,17 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class GuardsSectionComponent {
   navLinks:any[]=[];
-  showSlider: boolean = false;
+  @Input() showSlider: any = false;
 
   constructor(private router: Router,private changeDetectorRef: ChangeDetectorRef) {}
   guards:any = []
   ngOnInit():void{
-    this.guards = [
-      {
-        image:
-          '../../assets/img/guards/1.png',
-        thumbImage:
-          '../../assets/img/guards/1.png',
-      },
-      {
-        image:
-          '../../assets/img/guards/2.png',
-        thumbImage:
-          '../../assets/img/guards/2.png',
-      },
-      {
-        image:
-          '../../assets/img/guards/3.png',
-        thumbImage:
-          '../../assets/img/guards/3.png',
-      },
-      {
-        image:
-          '../../assets/img/guards/4.png',
-        thumbImage:
-          '../../assets/img/guards/4.png',
-      },
-    ];
+    for (let i = 1; i <= this.showSlider; i++) {
+      this.guards.push({
+        image: `../../assets/img/guards/${i}.jpeg`,
+        thumbImage: `../../assets/img/guards/${i}.jpeg`,
+      });
+    }
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.showSlider = event.url === '/' || event.url === '/home';

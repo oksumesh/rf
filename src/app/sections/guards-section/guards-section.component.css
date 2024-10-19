@@ -4,7 +4,7 @@
 /* Set the dimensions for the images */
 img {
     width: 330px;
-    height: 420px;
+    height: 200px;
     object-fit: contain; /* Adjust this as needed to control image aspect ratio */
     border-radius: 8px; /* Add rounded borders to the images */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -68,7 +68,7 @@ img {
   
     img {
       width: 330px;
-      height: 520px;
+      height: 200px;
       object-fit: cover; /* Adjust this as needed to control image aspect ratio */
       border-radius: 8px; /* Add rounded borders to the images */
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
